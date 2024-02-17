@@ -50,14 +50,14 @@ In order to limit traffic from the EigenLabs hosted Disperser, please restrict y
 
 #### Step 4: Opt-in into EigenDA
 
-In order to opt-in into EigenDA as an Operator, you must meet the following delegated TVL requirements:
+In order to opt-in to EigenDA as an Operator, you must meet the following delegated TVL requirements:
 
 - Have a minimum of 32 ETH delegated.
 - Have more than 1.1x current lowest-stake Operator in the active Operator set. Please see [EigenDA Churn Approver](https://docs.eigenlayer.xyz/operator-guides/avs-installation-and-registration/eigenda-operator-guide#eigenda-churn-approver) for more detail.
 - The operator to churn out has less than 10.01% of the total stake
 
 Execute the following command to opt-in to EigenDA AVS: 
-This command also downloads the latest SRS points if they don't exist on the node. The file is approximately 8GB in size and the opt-in process can some time to complete depending on the network bandwidth.
+This command also downloads the latest SRS points if they don't exist on the node. The file is approximately 8GB in size and the opt-in process can take some time to complete depending on the network bandwidth.
 
 ```
 ./run.sh opt-in
@@ -85,7 +85,7 @@ You may view the container logs using:
 docker logs -f <container_id>
 ```
 
-If you have successfully opted in to EigenDA and correctly running your EigenDA software, you should see the following logs for your EigenDA container:
+If you have successfully opted-in to EigenDA and correctly running your EigenDA software, you should see the following logs for your EigenDA container:
 
 ![EigenDA Logs](/img/operator-guides/eigenda-logs.png)
 
@@ -113,7 +113,7 @@ INFO [01-09|23:43:38.284|github.com/Layr-Labs/eigenda/node/grpc/server.go:119]  
 
 ```
 
-The following example log messages confirm that your node is receiving traffic from the Disperser. If you do not see these log messages then either you have not successfully opted-in to EigenDA (per Step 4) or your network security group might not be setup correctly (per Step 3).
+The following example log messages confirm that your node is receiving traffic from the Disperser. If you do not see these log messages then either you have not successfully opted-in to EigenDA (per Step 4) or your network security group may not be setup correctly (per Step 3).
 
 ```
 DEBUG[01-09|23:44:10.078|github.com/Layr-Labs/eigenda/node/node.go:298]             Store batch took                         duration:=5.831581ms caller=node.go:298
