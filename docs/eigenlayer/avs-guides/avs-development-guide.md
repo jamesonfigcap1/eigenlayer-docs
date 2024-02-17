@@ -17,18 +17,18 @@ description: >-
             2. Incredible Squaring [TaskManager 5 min Walk-Through](https://www.loom.com/share/5f3f2a447bc54ffa9d37d203c32088de?sid=0f5c2c07-82c5-4640-bc6f-6e4327bb3d81)
         - Once you have an idea of what you want to build on EigenLayer, submit an [AVS Questionnaire](https://bit.ly/avsquestions) and get in touch with us.
 ### Assessing
-* Once we review your AVS Questionnaire response, we will reach out and hop on a call with you to address any questions you have about the technical architecture of your system, the process of becoming an AVS, and EigenLayer’s value proposition.
-* Look into our docs more and determine whether building on EigenLayer makes sense and is feasible. You can ask any questions in our shared Telegram group, and our researchers and engineers will answer any specific questions.
+* Once we review your AVS Questionnaire response, we will reach out and schedule a call with you to address any questions you may have about the technical architecture of your system, the process of becoming an AVS, and EigenLayer’s value proposition.
+* Review our docs more and determine whether building on EigenLayer makes sense and is feasible. You can ask any questions in our shared Telegram group, and our researchers and engineers will answer any specific questions.
 
 ## Step 2: From idea to testnet: 
 ### Engineering 
-* AVS must write on-chain contracts, which contain the AVS registry contract and slashing contract, and test out the integration to EigenLayer by studying our Incredible Squaring demo. 
+* AVS developers must write on-chain contracts, which contain the AVS registry contract and slashing contract, and test out the integration to EigenLayer by studying our Incredible Squaring demo. 
     * AVS can use [Incredible Squaring](https://github.com/Layr-Labs/incredible-squaring-avs) to write on-chain code.
-    * The Incredible Squaring contracts consist of shadow deployment of Eigenlayer core contracts in goerli that AVSs can use for understanding how off-chain and on-chain code for any AVS can interact with Eigenlayer contracts. It contains the Strategy Manager (used to deposit and withdraw stake and stake accounting), Delegation Manager (used for operator registration and stakers delegating to operators), and experimental_slasher.sol (used for AVS syncing with Eigenlayer state) contracts. 
-    * We are providing a set of registry contracts that AVS teams can use as their own registry contracts, which will help them save development effort. Of course, AVS teams are free to write their own registry contracts instead.
+    * The Incredible Squaring contracts consist of shadow deployment of Eigenlayer core contracts on goerli. AVSs can use this for understanding how off-chain and on-chain code for any AVS can interact with Eigenlayer contracts. It contains the Strategy Manager (used to deposit and withdraw stake and stake accounting), Delegation Manager (used for operator registration and stakers delegating to operators), and experimental_slasher.sol (used for AVS syncing with Eigenlayer state) contracts. 
+    * We are providing a set of registry contracts that AVS teams can use as their own registry contracts, which will help them save development time and effort. Of course, AVS teams are free to write their own registry contracts instead.
 * AVSs must write their off-chain node software for operators to run.
     * AVS can use our [EigenSDK](https://github.com/Layr-Labs/eigensdk-go) for writing off-chain code; the EigenSDK is being openly developed and is a work in progress. 
-    * The EigenSDK has libraries and templates to help you write your off-chain node software code. It consists of modules for signature aggregation, interacting with EigenLayer contracts, networking, cryptography, and clients for events monitoring. Currently, many of these libraries are still work in progress.
+    * The EigenSDK includes libraries and templates to help AVSs write their off-chain node software code. It consists of modules for signature aggregation, interacting with EigenLayer contracts, networking, cryptography, and clients for events monitoring. Currently, many of these libraries are still work in progress.
 
 ## Step 3: From testnet to mainnet:
 ### Testing
