@@ -50,14 +50,14 @@ In order to limit traffic from the EigenLabs hosted Disperser, please restrict y
 
 #### Step 4: Opt-in into EigenDA
 
-In order to opt-in into EigenDA as an Operator, you must meet the following delegated TVL requirements:
+In order to opt-in to EigenDA as an Operator, you must meet the following delegated TVL requirements:
 
 - Have a minimum of 32 ETH delegated.
 - Have more than 1.1x current lowest-stake Operator in the active Operator set. Please see [EigenDA Churn Approver](https://docs.eigenlayer.xyz/operator-guides/avs-installation-and-registration/eigenda-operator-guide#eigenda-churn-approver) for more detail.
 - The operator to churn out has less than 10.01% of the total stake
 
 Execute the following command to opt-in to EigenDA AVS: 
-This command also downloads the latest SRS points if they don't exist on the node. The file is approximately 8GB in size and the opt-in process can some time to complete depending on the network bandwidth.
+This command also downloads the latest SRS points if they don't exist on the node. The file is approximately 8GB in size and the opt-in process can take some time to complete depending on the network bandwidth.
 
 ```
 ./run.sh opt-in
@@ -65,7 +65,7 @@ This command also downloads the latest SRS points if they don't exist on the nod
 
 Note: the script will use the `NODE_HOSTNAME` from [.env](https://github.com/Layr-Labs/eigenda-operator-setup/blob/2872d76b5e0b127400eb7e6dd16da362c7c142ba/.env.example#L63) as your current IP.
 
-If your operator fails to opt-in to EigenDA or is ejected by the Churn Approver then you may run the opt-in command again after the rate limiting threshold has passed. The current rate limiting threshold is 5 minutes.
+If your operator fails to opt-in to EigenDA or is ejected by the Churn Approver, then you may run the opt-in command again after the rate limiting threshold has passed. The current rate limiting threshold is 5 minutes.
 
 If you receive the error “error: failed to request churn approval .. Rate Limit Exceeded” you may retry after the threshold has passed. If you receive the error “insufficient funds”, you may increase your Operator’s delegated TVL to the required minimum and retry after the threshold has passed.
 
@@ -85,7 +85,7 @@ You may view the container logs using:
 docker logs -f <container_id>
 ```
 
-If you have successfully opted in to EigenDA and correctly running your EigenDA software, you should see the following logs for your EigenDA container:
+If you have successfully opted-in to EigenDA and are correctly running your EigenDA software, you should see the following logs for your EigenDA container:
 
 ![EigenDA Logs](/img/operator-guides/eigenda-logs.png)
 
@@ -168,7 +168,7 @@ git pull
 
 Update the `MAIN_SERVICE_IMAGE` in your `.env` file with the latest EigenDA version as per the release notes.
 
-> **_NOTE:_** If there are any specific instructions that needs to be followed for any upgrade, those instructions will be given with the release notes of the specific release. Please check the latest [release notes](https://github.com/Layr-Labs/eigenda-operator-setup/releases) on GitHub and follow the instructions before starting the services again.
+> **_NOTE:_** If there are any specific instructions that need to be followed for any upgrade, those instructions will be given with the release notes of the specific release. Please check the latest [release notes](https://github.com/Layr-Labs/eigenda-operator-setup/releases) on GitHub and follow the instructions before starting the services again.
 
 #### Step 2: Pull the latest docker images
 
@@ -184,7 +184,7 @@ docker compose down
 
 #### Step 4: Start your services again
 
-Make sure your `.env` file still has correct values in the [TODO](https://github.com/Layr-Labs/eigenda-operator-setup/blob/2872d76b5e0b127400eb7e6dd16da362c7c142ba/.env.example#L60) sections before you restart your node.
+Make sure your `.env` file still contains the correct values in the [TODO](https://github.com/Layr-Labs/eigenda-operator-setup/blob/2872d76b5e0b127400eb7e6dd16da362c7c142ba/.env.example#L60) sections before you restart your node.
 
 ```
 docker compose up -d
